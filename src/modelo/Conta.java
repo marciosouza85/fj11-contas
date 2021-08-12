@@ -1,19 +1,12 @@
+package modelo;
 
-public class Conta {
+public abstract class Conta {
 	
 	private double saldo;
 	private String titular;
 	private int numero;
 	private String agencia;
 	
-	public Conta(double saldo) {
-		this.saldo = saldo;
-	}
-
-	public Conta() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public void sacar(double valor) {
 		saldo = saldo - valor;
 	}
@@ -49,5 +42,14 @@ public class Conta {
 	public double getSaldo() {
 		return saldo;
 	}
+	
+	public void transfere(double valor, Conta conta) {
+		// Retiro da minha conta
+		sacar(valor);
+		// Deposito na outra conta
+		conta.depositar(valor);
+	}
+	
+	public abstract String getTipo();
  
 }
