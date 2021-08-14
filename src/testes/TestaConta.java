@@ -9,7 +9,7 @@ public class TestaConta {
 		c1.depositar(1200);
 		c1.setTitular("Cliente 1");
 		c1.setAgencia("003");
-		//c1.sacar(30);
+		c1.sacar(30);
 		System.out.println("Conta Tipo: " + c1.getTipo());
 		System.out.println("Conta: " + c1.getSaldo());
 		

@@ -7,4 +7,9 @@ public class ContaBeneficio extends Conta {
 		return "Benefício";
 	}
 
+	@Override
+	public String toString() {
+		return "Conta beneficio número " + getNumero();
+	}
+
 }
